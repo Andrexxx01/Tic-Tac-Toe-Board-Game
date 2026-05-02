@@ -1,16 +1,57 @@
-# React + Vite
+# React Tic Tac Toe with Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beginner-friendly Tic Tac Toe game built with React, Vite, and Tailwind CSS.  
+This project was created as a practice project to learn React component structure, state management, conditional rendering, event handling, and Tailwind CSS utility-first styling.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project includes a simple interactive Tic Tac Toe game where two players can take turns, update player names, track moves, detect winners, and restart the game.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive Tic Tac Toe gameplay
+- Player name editing
+- Active player indicator
+- Winner detection
+- Draw detection
+- Game log/history
+- Rematch button
+- Responsive layout
+- Tailwind CSS styling
+- React component-based structure
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
+- HTML
+- CSS
+
+## What I Learned
+
+Through this project, I practiced:
+
+- Creating reusable React components
+- Managing state with `useState`
+- Passing data through props
+- Handling user events
+- Rendering UI conditionally
+- Working with arrays and objects in React
+- Converting vanilla CSS into Tailwind CSS utility classes
+- Building a small but complete interactive web application
+
+## Project Structure
+
+```txt
+src/
+├── components/
+│   ├── GameBoard.jsx
+│   ├── GameOver.jsx
+│   ├── Log.jsx
+│   └── Player.jsx
+├── App.jsx
+├── game.js
+├── index.css
+└── main.jsx
