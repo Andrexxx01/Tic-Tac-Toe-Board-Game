@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Player({ initialName, symbol }) {
+export default function Player({ initialName, symbol, isActive }) {
     const [isEditing, setIsEditing] = useState(false);
     const [playerName, setPlayerName] = useState(initialName);
 
@@ -13,7 +13,7 @@ export default function Player({ initialName, symbol }) {
     }
 
     let editablePlayerName = (
-      <span className="inline-block m-0 w-30 truncate rounded-sm p-2 text-center text-base uppercase text-[#e1dec7]">
+      <span className={`inline-block m-0 w-30 truncate rounded-sm p-2 text-center text-base uppercase ${isActive ? "text-[#f6e35a]" : "text-[#e1dec7]"}`}>
         {playerName}
       </span>
     );
@@ -34,12 +34,23 @@ export default function Player({ initialName, symbol }) {
     }
 
     return (
-      <li className="flex w-1/2 gap-0 items-center justify-center border-2 border-transparent">
-        <span className="[font:inherit] flex items-center w-40 border-0 p-2 text-center text-base uppercase animate-[pulse-text_2s_infinite]">
+      <li
+        className={`flex w-1/2 gap-0 items-center justify-center border-2 ${isActive ? "border-[#f6e35a] animate-[pulse_2s_infinite_ease-in-out]" : "border-transparent"}`}
+      >
+        <span className="font-body flex items-center w-40 border-0 p-2 text-center text-base uppercase animate-[pulse-text_2s_infinite]">
           {editablePlayerName}
-          <span className="ml-8 text-base text-[#e1dec7]">{symbol}</span>
+          <span
+            className={`ml-8 text-base ${isActive ? "text-[#f6e35a]" : "text-[#e1dec7]"}`}
+          >
+            {symbol}
+          </span>
         </span>
-        <button onClick={handleEditClick} className="w-12 border-0 bg-none text-[#c3ba78] text-[0.9rem] cursor-pointer text-center px-1 pt-1 pb-1">{btnCaption}</button>
+        <button
+          onClick={handleEditClick}
+          className="w-12 border-0 bg-none text-[#c3ba78] text-[0.9rem] cursor-pointer text-center px-1 pt-1 pb-1 hover:text-[#f8ca31]"
+        >
+          {btnCaption}
+        </button>
       </li>
     );
 }
